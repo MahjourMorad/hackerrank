@@ -11,11 +11,13 @@ if __name__ == '__main__':
         my_list.append(student)
     
     list_of_scores.sort()
+    list_of_scores = list(set(list_of_scores))
     second_lowest_score = list_of_scores[1]
     final_answer = []
     for item in my_list:
         if item[1] == second_lowest_score:
             final_answer.append(item[0])
-        final_answer.sort()
+        
+    final_answer.sort()
     for name in final_answer:
         print(name)
